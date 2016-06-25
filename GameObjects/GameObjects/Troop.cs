@@ -27,6 +27,8 @@
 
         public Point minglingweizhi;
 
+        public int BuildDays;
+
         private TroopAction action;
         private int antiCriticalStrikeChance;
         private int antiStratagemChanceIncrement;
@@ -13420,6 +13422,30 @@
                 }
             }
             return result;
+        }
+
+        public bool CanBuildCity()
+        {
+            if (this.BelongedFaction == null) return false;
+
+            foreach (Architecture a in base.Scenario.Architectures)
+            {
+                if (a.ViewArea.HasPoint(this.Position))
+                {
+                    return false;
+                }
+            }
+            return true;
+
+        }
+
+        public void BuildCity()
+        {
+            if (this.BelongedFaction != null)
+            {
+                Architecture a = this.StartingArchitecture;
+                a.CreateArchitecture(this);
+            }
         }
     }
 }

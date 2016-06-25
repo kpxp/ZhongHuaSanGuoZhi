@@ -88,15 +88,6 @@ challengeDrawKilled_p 在对{1}的单挑中打成平手，而把对方击杀了�
 challengeDrawKilled_q 在对{0}的单挑中打成平手，但被对方击杀了。
 challengeDrawBothKilled_p 在对{1}的单挑中，双方也被击杀了。
 challengeDrawBothKilled_q 在对{0}的单挑中，双方也被击杀了。
-battleSkirmish {1}在{3}附近发生了战斗，历时{6}，{7}。
-battleSkirmish_p 以{0}军将领身份参与了{1}在{3}附近发生的战斗，历时{6}，{7}。
-battleOccupy {4}军成功攻占了{5}军的{3}，历时{6}。
-battleOccupy_p 以{0}军将领身份，带领部队成功攻占了{5}军的{3}，历时{6}。
-battleOccupy_q 以{0}军将领身份，带领部队守备{5}军的{3}，但最后城池还是被攻占了，历时{6}。
-battleOccupy_r 以{0}军将领身份，带领部队准备攻占{5}军的{3}，但城池却被{4}军攻占了，历时{6}。
-battleRetreat 在{5}军的力守下，成功守住了来自{4}军向{3}的攻击，历时{6}。
-battleRetreat_p 以{0}军将领身份，带领部队成功守住了来自{4}军向{3}的攻击，历时{6}。
-battleRetreat_q 以{0}军将领身份，带领部队准备攻占{5}军的{3}，但在敌方强力的守备下撤退了，历时{6}。
 selectPrince {0}在{1}被{2}立为储君了。
 selectPrince_p 被立为{1}军的储君了。
 selectPrince_q 在位君主时，立{0}为储君了。

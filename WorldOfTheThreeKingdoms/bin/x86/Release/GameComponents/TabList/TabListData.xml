@@ -1251,7 +1251,7 @@
         </Tab>
         <Tab ID="8"  Name="PersonalTitle" DisplayName="称号" Columns="1 60 62 63 67 66 65 64 61 68">
         </Tab>
-		<Tab ID="10"  Name="Stunt" DisplayName="技能特技" Columns="1 136 139 140" ListKind="Skill" ListMethod="GetSkillList">
+		<Tab ID="10"  Name="Stunt" DisplayName="技能特技" Columns="1 136 139 140" ListKind="Stunt" ListMethod="GetStuntList">
         </Tab>
         <Tab ID="11"  Name="Experience" DisplayName="能力经验" Columns="1 80 100 101 102 103 104">
         </Tab>
@@ -1261,7 +1261,7 @@
         </Tab>
         <Tab ID="14"  Name="PersonRelations" DisplayName="人物关系" Columns="1 121 122 123 125 126 132 133">
         </Tab>
-		<Tab ID="15"  Name="PersonSpecialRelations" DisplayName="关系武將" Columns="1 180" ListKind="PersonRelationValue" ListMethod="GetPersonRelationList">
+		<Tab ID="15"  Name="PersonSpecialRelations" DisplayName="关系武將" Columns="1 180">
         </Tab>
 		<Tab ID="16"  Name="MoveTroopSkills" DisplayName="行军步兵" Columns="1 220 221 222 223 224 225 226 230 231 232 233 234 235 236">
         </Tab>
@@ -3630,83 +3630,6 @@
                 FontColor="4294967295"
                 Align="Middle">
         </Column>
-		<Column ID="150" Name="RoutCount" IsNumber="true" DisplayName="击破" MinWidth="60" DetailLevel="3"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="151" Name="ServedYears" IsNumber="true" DisplayName="活躍年" MinWidth="60" DetailLevel="3"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="152" Name="TroopDamageDealt" IsNumber="true" DisplayName="总士兵伤害" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="153" Name="TroopBeDamageDealt" IsNumber="true" DisplayName="总受士兵伤害" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="154" Name="ArchitectureDamageDealt" IsNumber="true" DisplayName="总建筑伤害" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="155" Name="CaptiveCount" IsNumber="true" DisplayName="俘获将领次数" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="156" Name="StratagemSuccessCount" IsNumber="true" DisplayName="计略成功次数" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="157" Name="StratagemFailCount" IsNumber="true" DisplayName="计略失败次数" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="158" Name="StratagemBeSuccessCount" IsNumber="true" DisplayName="计略中计次数" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="159" Name="StratagemBeFailCount" IsNumber="true" DisplayName="计略阻挡次数" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
-		<Column ID="160" Name="OfficerKillCount" IsNumber="true" DisplayName="致战死数" MinWidth="80" DetailLevel="7"
-                FontName="方正隶变_GBK"
-                FontSize="15"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Right">
-        </Column>
    </Columns>
       <Tabs Margin="5">
         <Tab ID="1"  Name="Basic" DisplayName="基本" Columns="1 13 21 3 4 5 10 11 12 14" ListKind="Influence" ListMethod="GetInfluenceList">
@@ -3724,8 +3647,6 @@
         <Tab ID="7"  Name="Description" DisplayName="介绍" Columns="1 300" ListKind="Influence" ListMethod="GetInfluenceList">
 		</Tab>
         <Tab ID="8"  Name="Transport" DisplayName="运输" Columns="1 2 3  10 11 12 301 302 303" ListKind="Influence" ListMethod="GetInfluenceList">
-		</Tab>
-		<Tab ID="9"  Name="CombatTimes" DisplayName="战斗次数" Columns="1 150 151 152 153 154 155 156 157 158 159 160" ListKind="Influence" ListMethod="GetInfluenceList">
 		</Tab>
       </Tabs>
     </ListKind>
@@ -4628,7 +4549,7 @@
         </Tab>
       </Tabs>
     </ListKind>
-    <ListKind ID="32" Name="PersonGeneratorType" DisplayName="武将类型" ShowPortrait ="false">
+        <ListKind ID="32" Name="PersonGeneratorType" DisplayName="武将类型" ShowPortrait ="false">
       <Columns>
         <Column ID="0" Name="ID" IsNumber="true" DisplayName="序号" MinWidth="50" DetailLevel="1"
                 FontName="方正隶变_GBK"
@@ -4655,70 +4576,6 @@
       <Tabs Margin="5">
         <Tab ID="1"  Name="Basic" DisplayName="基本" Columns="1 2">
         </Tab>
-      </Tabs>
-    </ListKind>
-	<ListKind ID="33" Name="PersonRelationValue" DisplayName="武将关系" ShowPortrait ="false">
-      <Columns>
-        <Column ID="1" Name="Name" CountToDisplay="False" IsNumber="false" DisplayName="名称" MinWidth="80" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Left">
-        </Column>
-        <Column ID="2" Name="RelationValue" IsNumber="true" DisplayName="关系" MinWidth="80" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Middle">
-        </Column>
-		<Column ID="3" Name="HasStrain" IsNumber="false" DisplayName="血缘" MinWidth="40" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Middle">
-        </Column>
-		<Column ID="4" Name="HasCloseStrain" IsNumber="false" DisplayName="血亲" MinWidth="40" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Middle">
-        </Column>
-		<Column ID="5" Name="IsSpouse" IsNumber="false" DisplayName="配偶" MinWidth="40" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Middle">
-        </Column>
-		<Column ID="6" Name="IsBrother" IsNumber="false" DisplayName="义兄" MinWidth="40" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Middle">
-        </Column>
-		<Column ID="7" Name="IsClose" IsNumber="false" DisplayName="亲爱" MinWidth="40" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Middle">
-        </Column>
-		<Column ID="8" Name="IsHate" IsNumber="false" DisplayName="厌恶" MinWidth="40" DetailLevel="8"
-                FontName="方正隶变_GBK"
-                FontSize="14"
-                FontStyle="Regular"
-                FontColor="4294967295"
-                Align="Middle">
-        </Column>
-      </Columns>
-      <Tabs Margin="5">
-		<Tab ID="1"  Name="Basic" DisplayName="武将关系" Columns="1 2 3 4 5 6 7 8">
-		</Tab>
       </Tabs>
     </ListKind>
   </TabList>

@@ -213,6 +213,7 @@
         TroopCaptive,
         TroopTreasure,
         TroopMorph,
+        TroopBuildCity,//野外建城
         Plugins,
         CurrentArchitectureLeftClick,
         CurrentTroopLeftClick,

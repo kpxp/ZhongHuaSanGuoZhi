@@ -1079,6 +1079,11 @@ namespace WorldOfTheThreeKingdoms.GameScreens
                     this.CurrentTroop.Morph();
                     break;
 
+                case ContextMenuResult.TroopBuildCity:
+                    
+                    this.CurrentTroop.BuildCity();
+                    break;
+
                 case ContextMenuResult.TroopOccupy:
                     this.CurrentTroop.Operated = true;
                     this.CurrentTroop.Occupy();

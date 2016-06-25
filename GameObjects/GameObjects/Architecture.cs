@@ -13448,12 +13448,19 @@
             }
         }
 
+
+        private Point position;
         public Point Position
         {
             get
             {
                 return this.ArchitectureArea.TopLeft;
             }
+            set
+            {
+                this.position = value;
+            }
+
         }
 
         public int RecruitmentPopulationBoundary
@@ -14470,6 +14477,70 @@
                 }
             }
             return result;
+        }
+
+        public  Architecture CreateArchitecture( Troop troop)
+        {
+            // Architecture  a = HandleArchitectureID();
+
+            Architecture a = new Architecture();
+
+            //look for empty id
+            int id = 500;
+            ArchitectureList al = base.Scenario.Architectures as ArchitectureList;
+            
+            al.SmallToBig = true;
+            al.IsNumber = true;
+            al.PropertyName = "ID";
+            al.ReSort();
+            foreach (Architecture src in al)
+            {
+                if (src.ID == id)
+                {
+                    id++;
+
+                }
+                else if (src.ID > id)
+                {
+                    break;
+                }
+            }
+            
+            
+                a.ID = id;
+                a.Kind = this.Scenario.GameCommonData.AllArchitectureKinds.GetArchitectureKind(500) ;
+                a.Kind.ID = 500;
+                /*if (a.Kind .ID != null)
+                {
+                    throw new Exception("a的Kind ID不为null" + a.Kind.ID);
+                }*/
+                a.Name = "野外城池";
+                a.CaptionID = 9999;
+                a.Mayor = null;
+                a.IsStrategicCenter = false;
+                a.LocationState.ID = this.LocationState.ID;
+                a.Characteristics = null;
+                a.Persons = null ;
+                //HandleArchitectureProperty();
+                a.Agriculture = 100;
+                a.Commerce = 0;
+                a.Endurance = 100;
+                a.Technology = 0;
+                a.Population = troop.Army.Quantity;
+                a.Morale = 100;
+                a.Domination = 100;
+
+
+                // HandleArchitecturePosition();
+                a.Position = troop.Position;
+
+                //HandleArchitectureFaction();
+                a.BelongedFaction = troop.BelongedFaction;
+
+                // HandleArchitectureSection();
+                troop.BelongedFaction .FirstSection.AddArchitecture(a);
+
+            return a;
         }
 
     }
