@@ -42,6 +42,8 @@
     <Compile Include="Global.cs" />
     <Compile Include="TransportDialogPlugin\TransportDialogPlugin.cs" />
     <Compile Include="TransportDialogPlugin\TransportDialog.cs" />
+    <Compile Include="TreasureDetailPlugin\TreasureDetail.cs" />
+    <Compile Include="TreasureDetailPlugin\TreasureDetailPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameFreeText\GameFreeText.csproj">

@@ -243,6 +243,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CreateTroopPlugin\CreateTroopPlugin.csproj">
+      <Project>{FC697DF4-40A3-41C2-9A8C-2A9DAFEA09CB}</Project>
+      <Name>CreateTroopPlugin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GameFreeText\GameFreeText.csproj">
       <Project>{E13A763D-DC5B-447F-AF3F-392343B8875B}</Project>
       <Name>GameFreeText</Name>

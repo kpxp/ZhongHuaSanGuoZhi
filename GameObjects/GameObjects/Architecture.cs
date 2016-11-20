@@ -14520,7 +14520,7 @@
                 a.IsStrategicCenter = false;
                 a.LocationState.ID = this.LocationState.ID;
                 a.Characteristics = null;
-                a.Persons = null ;
+                //a.Persons = null ;
                 //HandleArchitectureProperty();
                 a.Agriculture = 100;
                 a.Commerce = 0;
